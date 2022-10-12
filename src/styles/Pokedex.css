@@ -1,0 +1,7 @@
+header>img{
+    width: 20%;
+}
+
+.pokemons-container{
+    display: flex;
+}
