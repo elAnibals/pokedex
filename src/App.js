@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import NavigationBar from "./components/Navbar"
+import Spinner from 'react-bootstrap/Spinner';
 import Pokedex from "./components/Pokedex";
 import { getPokemonData, getPokemons } from './api';
 import Header from "./components/Header"
@@ -56,7 +57,7 @@ function App() {
           onRightClick={nextPage}
         />
         { loading ?
-          <div>Cargando Pokemones...</div>
+          <div>      <Spinner animation="border" variant="danger" /></div>
           :
           <Pokedex pokemons={pokemons}/>
         }
