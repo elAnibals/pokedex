@@ -3,6 +3,7 @@ import "../styles/Navbar.css";
 import {Navbar, Container, Form, Button} from "react-bootstrap";
 import pokeball from "../assets/pokeball.png"
 import {searchPokemon} from "../api"
+import Pokemon from "./Pokemon";
 
 const {useState}=React;
 
@@ -44,6 +45,7 @@ const NavigationBar = () =>{
                     </Form>
                 </div>
             </Navbar>
+            <div><Pokemon pokemon={pokemon}/></div>
         </Container>
     );
 }

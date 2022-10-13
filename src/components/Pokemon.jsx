@@ -7,30 +7,35 @@ const Pokemon = (props) =>{
     //console.log(props);
     const pokemon=props.pokemon;
     console.log(pokemon)
-    return (
-        <div id="pokemon">
-            <p></p>
-            <Card key={pokemon.name}style={{ width: '18rem' }}>
-                <Card.Body>
-                    <Card.Title><strong>#{pokemon.id} </strong> {pokemon.name}</Card.Title>
-                    <img src={pokemon.sprites.front_shiny} alt="/"/>
-                </Card.Body>
-                <Card.Footer fluid>
+    try{
+        return (
+            <div id="pokemon">
+                <p></p>
+                <Card key={pokemon.name}style={{ width: '18rem' }} className="row d-flex justify-content-center align-items-center">
+                    <Card.Body>
+                        <Card.Title><strong>#{pokemon.id} </strong> {pokemon.name}</Card.Title>
+                        <img src={pokemon.sprites.front_default} alt="/"/>
+                    </Card.Body>
                     <Row fluid>
-                        {
-                            pokemon.types.map((type)=>{
-                                return(
-                                    <Col>
-                                        <Badge>{type.type.name}</Badge>
-                                    </Col>
-                                );
-                            })
-                        }
+                        {pokemon.types.map((type)=>{
+                            return(
+                                <Col>
+                                    <Badge>{type.type.name}</Badge>
+                                </Col>
+                            );
+                        })}
                     </Row>   
-                </Card.Footer>
-            </Card>
-        </div>
-    );
+                    <p></p>
+                </Card>
+            </div>
+        );
+    }
+    catch(err){
+        return(
+            <div></div>
+        )
+    }
+    
    
     
 }

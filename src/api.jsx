@@ -11,7 +11,7 @@ export const searchPokemon = async (pokemon) => {
     }
 }
 
-export const getPokemons = async (limit=9, offset=0) => {
+export const getPokemons = async (limit=15, offset=0) => {
     try{
         const response = await fetch(url+"?limit="+limit+"&offset="+offset);
         const data=await response.json();

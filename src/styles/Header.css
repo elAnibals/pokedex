@@ -1,0 +1,17 @@
+.pokedex-img{
+    width: 400px;
+}
+
+.buttons-next-prev{
+    display: flex;
+}
+
+#prev{
+    width: 40px;
+    height: 40px;
+}
+
+#next{
+    width: 40px;
+    height: 40px;
+}

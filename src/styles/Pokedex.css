@@ -1,7 +1,7 @@
-header>img{
-    width: 20%;
-}
+
 
 .pokemons-container{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    /*grid-gap: 20px;*/
 }
