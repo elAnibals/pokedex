@@ -11,15 +11,15 @@ const {useState,useEffect} = React;
 function App() {
   const [pokemons, setPokemons]=useState([]);
   const [page, setPage]=useState(0);
-  const [total,setTotal]=useState(100);
+  const [total,setTotal]=useState(77);
   const [loading, setLoading]=useState(true);
 
-  const lastPage = () =>{
-    console.log("last page");
-  }
+  const previoustPage = () =>{
+    setPage(page-1);
+  } 
 
   const nextPage = () =>{
-    console.log("next page")
+    setPage(page+1);
   }
 
   const calculateTotal = () =>{
@@ -53,7 +53,7 @@ function App() {
         <Header 
           page={page}
           totalPages={total}
-          onLeftClick={lastPage}
+          onLeftClick={previoustPage}
           onRightClick={nextPage}
         />
         { loading ?
