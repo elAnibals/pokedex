@@ -7,7 +7,7 @@ import { getPokemonData, getPokemons } from './api';
 import Header from "./components/Header"
 
 const {useState,useEffect} = React;
-///anibal
+
 function App() {
   const [pokemons, setPokemons]=useState([]);
   const [page, setPage]=useState(0);

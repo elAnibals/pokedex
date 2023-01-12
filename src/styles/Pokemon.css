@@ -1,3 +1,14 @@
-Card{
-    align-items: center;
+.pokemon{
+  align-items: center;
+  transition: all 400ms ease;
+  cursor: default;
+  box-shadow: 5px 5px 20px rgba (0,0,0,0.4);
+  overflow: hidden;
 }
+
+.pokemon:hover{
+  box-shadow: 5px 5px 20px rgba (0,0,0,1);
+  transform: translateY(-5%);
+}
+
+
